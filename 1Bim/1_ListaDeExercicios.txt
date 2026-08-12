@@ -49,10 +49,45 @@ main(){
 }
 
 5)	Sabendo que um latão é constituído de 70% de cobre e 30% de zinco, indique a quantidade de cada um desses componentes para se obter uma certa quantidade de latão informada pelo usuário.
+#include <stdio.h>
+#include <locale.h>
+float latao, cobre, zinco;
+main(){
+	setlocale(LC_ALL, "Portuguese");
+	printf("Digite a quantidade de latão é:\n");
+	scanf("%f", &latao);
+	cobre = latao * (0.7);
+	zinco = latao * (0.3);
+	printf("\nValor cobre: %.2f valor zinco %.2f ", cobre, zinco);
+}
 
 6)	Efetuar a leitura de um número inteiro e apresentar o resultado do quadrado deste número.
+#include <stdio.h>
+#include <locale.h>
+int numero;
+main(){
+	setlocale(LC_ALL, "Portuguese");
+	printf("Digite um numero:\n");
+	scanf("%i", &numero);
+	printf("\nO quadrado deste numero é: %i", (numero*numero));
+}
 
 7)	Faça um programa que deve calcular o total da compra de um produto recebendo como informações, o valor e a quantidade deste produto. Em seguida, será informado o valor pago e o sistema deve calcular e mostrar o troco.
+#include <stdio.h>
+#include <locale.h>
+float valorProduto, quantidade, totalCompra, valorPago, troco;
+main(){
+	printf("Digite o valor do produto:\n");
+	scanf("%f", &valorProduto);
+	printf("\nDigite a quantidade:\n");
+	scanf("%f", &quantidade);
+	totalCompra = valorProduto*quantidade;
+	printf("\nTotal compra: %.2f", totalCompra);
+	printf("\nDigite o valor pago:\n");
+	scanf("%f", &valorPago);
+	troco = valorPago-totalCompra;
+	printf("\nTroco: %.2f", troco);
+}
 
 8)	Faça um programa que converta a temperatura de graus Celsius para graus Fahrenheit. A fórmula de conversão é: F = (9 * C + 160) / 5, onde F é a temperatura em Fahrenheit e C é a temperatura em Celsius.
 
