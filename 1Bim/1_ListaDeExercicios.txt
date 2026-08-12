@@ -1,0 +1,20 @@
+1) Leia um numero e exiba seu sucessor  cesar
+
+2) Faça um programa em linguagem C que calcule a idade de uma pessoa, lendo o ano atual e o ano de nascimento, apresentar a idade da pessoa calculada. 
+
+3) Faça um programa em linguagem C que realize a conversão de um valor em dólares para real. O programa recebe o valor em dólares e a cotação, depois calcula o valor em reais
+
+4)Faça um programa em linguagem C que calcule o pagamento de comissão de vendedores, levando-se em consideração que sua comissão será de 5% do total da venda, o usuário
+ira informar o valor total da ven 
+
+5) 5)	Sabendo que um latão é constituído de 70% de cobre e 30% de zinco, indique a quantidade de cada um desses componentes para se obter uma certa quantidade de latão informada pelo usuário.
+
+6)	Efetuar a leitura de um número inteiro e apresentar o resultado do quadrado deste número.
+
+7)	Faça um programa que deve calcular o total da compra de um produto recebendo como informações, o valor e a quantidade deste produto. Em seguida, será informado o valor pago e o sistema deve calcular e mostrar o troco.
+
+8)	Faça um programa que converta a temperatura de graus Celsius para graus Fahrenheit. A fórmula de conversão é: F = (9 * C + 160) / 5, onde F é a temperatura em Fahrenheit e C é a temperatura em Celsius.
+
+9)	Ler uma temperatura em graus Fahrenheit e apresentá-la convertida em graus Celsius. A fórmula de conversão é: C = (F – 32) * (5 / 9), onde F é a temperatura em Fahrenheit e C é a temperatura em Celsius.
+
+10) 	Ler dois valores para as variáveis A e B, efetuar a troca dos valores de forma que a variável A passe a possuir o valor da variável B e que a variável B passe a possuir o valor da variável A. Apresentar no final os valores trocados.
