@@ -1,13 +1,54 @@
 1) Leia um numero e exiba seu sucessor  cesar
+#include <stdio.h>
+int numero;
+
+main(){
+	
+	printf("Digite um4 numero:\n");
+	scanf("%i", &numero);	
+	numero = numero+1;	
+	printf("\nNumero sucessor: %i", numero);	
+}	
 
 2) Faça um programa em linguagem C que calcule a idade de uma pessoa, lendo o ano atual e o ano de nascimento, apresentar a idade da pessoa calculada. 
 
+#include <stdio.h>
+int idade, anoNascimento, anoAtual;
+main(){
+	printf("Digite o ano atual:\n");
+	scanf("%i", &anoAtual);
+	printf("Digite o ano de nascimento:\n");
+	scanf("%i", &anoNascimento);
+	idade=(anoAtual-anoNascimento);
+	printf("\nIdade: %i", idade);	
+}
+
 3) Faça um programa em linguagem C que realize a conversão de um valor em dólares para real. O programa recebe o valor em dólares e a cotação, depois calcula o valor em reais
 
-4)Faça um programa em linguagem C que calcule o pagamento de comissão de vendedores, levando-se em consideração que sua comissão será de 5% do total da venda, o usuário
-ira informar o valor total da ven 
+#include <stdio.h>
+float dollar, cotacao, reais;
+main(){
+	printf("Digite o valor em dollar:\n");
+	scanf("%f", &dollar);
+	printf("\nDigite a cotação:\n");
+	scanf("%f", &cotacao);
+	reais = (dollar*cotacao);
+	printf("\nValor em reais: %.2f", reais);
+}
 
-5) 5)	Sabendo que um latão é constituído de 70% de cobre e 30% de zinco, indique a quantidade de cada um desses componentes para se obter uma certa quantidade de latão informada pelo usuário.
+
+4)Faça um programa em linguagem C que calcule o pagamento de comissão de vendedores, levando-se em consideração que sua comissão será de 5% do total da venda, o usuário
+ira informar o valor total da venda
+#include <stdio.h>
+float venda, valorComissao;
+main(){
+	printf("Digite o valor da venda:\n");
+	scanf("%f", &venda);
+	valorComissao = venda * (5.0/100.0);
+	printf("\nValor da comissão: %.2f", valorComissao);
+}
+
+5)	Sabendo que um latão é constituído de 70% de cobre e 30% de zinco, indique a quantidade de cada um desses componentes para se obter uma certa quantidade de latão informada pelo usuário.
 
 6)	Efetuar a leitura de um número inteiro e apresentar o resultado do quadrado deste número.
 
