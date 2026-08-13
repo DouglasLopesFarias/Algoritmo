@@ -90,7 +90,42 @@ main(){
 }
 
 8)	Faça um programa que converta a temperatura de graus Celsius para graus Fahrenheit. A fórmula de conversão é: F = (9 * C + 160) / 5, onde F é a temperatura em Fahrenheit e C é a temperatura em Celsius.
+#include <stdio.h>
+#include <locale.h>
+float f,c;
+main(){
+	setlocale(LC_ALL, "Portuguese");
+    printf("Digite a temperatura em Celsius:\n");
+	scanf("%f", &c);
+	f = (9 * c + 160) / 5; 
+	printf("\nTemperatura em Fahrenheit é: %.2f", f);			
+}
 
 9)	Ler uma temperatura em graus Fahrenheit e apresentá-la convertida em graus Celsius. A fórmula de conversão é: C = (F – 32) * (5 / 9), onde F é a temperatura em Fahrenheit e C é a temperatura em Celsius.
 
 10) 	Ler dois valores para as variáveis A e B, efetuar a troca dos valores de forma que a variável A passe a possuir o valor da variável B e que a variável B passe a possuir o valor da variável A. Apresentar no final os valores trocados.
+
+
+
+#include <stdio.h>
+#include <locale.h>
+int a,b;
+main(){
+	setlocale(LC_ALL, "Portuguese");
+	a = 10;
+	b = 20;
+	if( (a==10)  && (b==20) ){
+		printf("\nA é igual a 10 e b igual a 20");
+	}
+	b=200;
+	if( (a==10)  || (b==20) ){
+		printf("\nA é igual a 10 ou b igual a 20");
+	}
+	
+	if( (a==10)  && (b==20) ){
+		printf("\nA é igual a 10 e b igual a 20");
+	}else{
+		printf("\nA não é igual a 10 e b não igual a 20");
+	}
+	
+}
