@@ -72,3 +72,105 @@ main(){
 		printf("\nAluno reprovado com nota: %.2f", media);
 	}
 }
+
+//== exe 08
+#include <stdio.h>
+char sexo;
+float h,pesoIdeal;
+main(){
+	printf("Digite o sexo da pessoa(m - masculino e f - feminino):\n");
+	scanf("%c", &sexo);
+	printf("Digite a altura da pessoa:\n");
+	scanf("%f", &h);
+	if(sexo == 'm'){
+		pesoIdeal =  (72.7*h) - 58;
+	}else{
+		pesoIdeal =  (62.1*h) - 44.7; 
+	}
+	printf("\nPeso ideal: %.2f", pesoIdeal);	
+}
+
+//== exe 09 
+#include <stdio.h>
+float p,e,m;
+main(){
+	printf("Digite o peso dos peixes:\n");
+	scanf("%f", &p);
+	e = 0.0;
+	m = 0.0;
+	if(p > 50){
+		e = p - 50;
+		m = (e*4.0);
+	}
+	printf("\nValor do excedente: %.2f", e);
+	printf("\nValor da multa: %.2f", m);	
+}
+
+//== exe 10
+#include <stdio.h>
+int idade;
+main(){
+	printf("Digite a idade do nadador:\n");
+	scanf("%i", &idade);
+	if(idade < 5){
+		printf("\nCategoria Fraudinha");		
+	}else if( idade <= 7){
+		printf("\nCategoria Pre-mirin");		
+	}else if(idade <= 11){
+		printf("\nCategoria mirin");		
+	}else if( idade <= 13){
+		printf("\nCategoria infantil");		
+	}else if( idade <= 17){
+		printf("\nCategoria juvenil");		
+	}else{
+		printf("\nCategoria adulto");		
+	}	
+}
+
+//== exe 11
+#include <stdio.h>
+int a,b,c,menor,medio,maior;
+main(){
+	printf("Digite o primeiro valor:\n");
+	scanf("%i", &a);
+	printf("Digite o segundo valor:\n");
+	scanf("%i", &b);
+	printf("Digite o terceiro valor:\n");
+	scanf("%i", &c);
+	if( (a<b) && (a<c) ){
+		menor = a;
+	} else if( (b<a) && (b<c) ){
+		menor = b;
+	}else{
+		menor = c;
+	} 
+	if(menor == a){
+		if(b<c){
+			medio = b;
+			maior = c;
+		}else{
+			medio = c;
+			maior = b;
+		}
+	}else if(menor == b){
+		if(a<c){
+			medio = a;
+			maior = c;
+		}else{
+			medio = c;
+			maior = a;
+		}
+	}else{
+		if(a<b){
+			medio = a;
+			maior = b;
+		}else{
+			medio = b;
+			maior = a;
+		}
+	}
+	printf("\nMenor: %i", menor);
+	printf("\nMedio: %i", medio);
+	printf("\nMaior: %i", maior);
+	
+}
