@@ -174,3 +174,40 @@ main(){
 	printf("\nMaior: %i", maior);
 	
 }
+
+
+//== exemplo if composto
+
+#include <stdio.h>
+float media;
+main(){
+	printf("Digite a media:\n");
+	scanf("%f", &media);
+	if(media >= 5){
+		if(media >= 7){
+			printf("Aluno aprovado");			
+		}else{
+			printf("Aluno de Exame final");
+		}		
+	}else{
+		printf("Aluno reprovado;");
+	}
+}
+
+
+//== exemplo case
+#include <stdio.h>
+int op;
+main(){
+	printf("01 - Cadastrar\n");
+	printf("02 - Imprimir\n");
+	printf("03 - Sair do sistema\n");
+	printf("Digite uma opção:\n");
+	scanf("%i", &op);
+	switch(op){
+		case 1: printf("Cadastro de clientes");break;
+		case 2: printf("Listagem de clientes");break;
+		case 3: printf("Saindo do sistema");break;
+		default: printf("Opção invalida");break;
+	}	
+}
