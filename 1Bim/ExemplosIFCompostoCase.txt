@@ -1,0 +1,53 @@
+//== exemplo de if composto
+#include <stdio.h>
+float media;
+main(){
+	printf("Digite a media do aluno:\n");
+	scanf("%f", &media);
+	if(media >=5){
+		if(media >= 7){
+			printf("Aluno aprovado");
+		}else{
+			printf("Aluno de exame final");
+		}
+	}else{
+		printf("Aluno reprovado!");
+	}
+}
+
+
+//=== exemplo de case
+
+#include <stdio.h>
+int op;
+main(){
+	printf("01 - Cadastrar\n");
+	printf("02 - Listar Todos\n");
+	printf("03 - Sair do sistema\n");
+	printf("Digite uma opção:\n");
+	scanf("%i", &op);
+	switch(op){
+		case 1: 
+		    printf("Cadastrar");
+		    break;
+		case 2: 
+		    printf("Listar Todos");
+		    break;
+		case 3: 
+		    printf("Saindo do sistema...");
+		    break;
+		default: 
+		    printf("Opção inválida");
+		    break;
+	} 
+	
+	/*if(op == 1){
+		printf("Cadastrar");
+	}else if(op == 2){
+		printf("Listar Todos");
+	}else if(op == 3){
+		printf("Saindo do sistema...");
+	}else{
+		printf("Opção inválida");
+	}*/
+}
