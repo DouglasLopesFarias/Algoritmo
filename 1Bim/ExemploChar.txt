@@ -1,0 +1,17 @@
+//Exemplo char
+#include <stdio.h>
+char sexo;
+char nome[100];
+main(){
+	printf("Digite o sexo da pessoa:\n");
+	scanf("%c", &sexo);
+	if(sexo == 'm'){
+		printf("\nMasculino");
+	}else{
+		printf("\nFeminino");
+	}
+	printf("\nDigite um nome:\n");
+	fflush(stdin);
+	fgets(nome, 100, stdin);
+	printf("\nNome digitado: %s ", nome);
+}
