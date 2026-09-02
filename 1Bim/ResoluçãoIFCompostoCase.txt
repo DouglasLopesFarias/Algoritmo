@@ -1,0 +1,25 @@
+//== exe 01
+#include <stdio.h>
+char time1[50], time2[50];
+int gols1, gols2;
+main(){
+	printf("\nDigite o nome do time1:\n");
+	fflush(stdin);
+	fgets(time1, 50, stdin);
+	printf("\nDigite a quantidade de gols do time 1:\n");
+	scanf("%i", &gols1);	
+	printf("\nDigite o nome do time2:\n");
+	fflush(stdin);
+	fgets(time2, 50, stdin);
+	printf("\nDigite a quantidade de gols do time 2:\n");
+	scanf("%i", &gols2);
+	if(gols1 == gols2){
+		printf("Empate");
+	}else{
+		if(gols1>gols2){
+			printf("\nVencedor: %s", time1);
+		}else{
+			printf("\nVencedor: %s", time2);
+		}
+	}
+}
