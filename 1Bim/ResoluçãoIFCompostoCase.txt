@@ -72,3 +72,22 @@ main(){
 	}
 	
 }
+
+//== exe 04
+#include <stdio.h>
+int v_motorista, v_maxima;
+main(){
+	printf("Digite a velocidade maxima:\n");
+	scanf("%i", &v_maxima);
+	printf("Digite a velocidade do motorista:\n");
+	scanf("%i", &v_motorista);
+	if(v_motorista <= v_maxima){
+		printf("Velocidade permitida");
+	}else{
+		if(v_motorista <= (v_maxima*1.2)){
+			printf("Multa grave");
+		}else{
+			printf("Multa gravíssima");
+		}
+	}
+}
