@@ -23,3 +23,24 @@ main(){
 		}
 	}
 }
+
+//== Exe 02
+#include <stdio.h>
+float temperatura;
+main(){	
+	printf("Digite a temperatura:\n");
+	scanf("%f", &temperatura);
+	if(temperatura < 100.0){
+		printf("\nTemperatura esta muito baixa");
+	}else{
+		if( temperatura <= 200.0){
+			printf("\nTemperatura esta baixa");
+		}else{
+			if(temperatura < 500.0){
+				printf("\nTemperatura normal");
+			}else{
+				printf("\nTemperatura muito alta");
+			}
+		}		
+	}	
+}
