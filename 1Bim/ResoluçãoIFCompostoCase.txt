@@ -1,0 +1,93 @@
+//== exe 01
+#include <stdio.h>
+char time1[50], time2[50];
+int gols1, gols2;
+main(){
+	printf("\nDigite o nome do time1:\n");
+	fflush(stdin);
+	fgets(time1, 50, stdin);
+	printf("\nDigite a quantidade de gols do time 1:\n");
+	scanf("%i", &gols1);	
+	printf("\nDigite o nome do time2:\n");
+	fflush(stdin);
+	fgets(time2, 50, stdin);
+	printf("\nDigite a quantidade de gols do time 2:\n");
+	scanf("%i", &gols2);
+	if(gols1 == gols2){
+		printf("Empate");
+	}else{
+		if(gols1>gols2){
+			printf("\nVencedor: %s", time1);
+		}else{
+			printf("\nVencedor: %s", time2);
+		}
+	}
+}
+
+//== Exe 02
+#include <stdio.h>
+float temperatura;
+main(){	
+	printf("Digite a temperatura:\n");
+	scanf("%f", &temperatura);
+	if(temperatura < 100.0){
+		printf("\nTemperatura esta muito baixa");
+	}else{
+		if( temperatura <= 200.0){
+			printf("\nTemperatura esta baixa");
+		}else{
+			if(temperatura < 500.0){
+				printf("\nTemperatura normal");
+			}else{
+				printf("\nTemperatura muito alta");
+			}
+		}		
+	}	
+}
+
+//== exe 03
+#include <stdio.h>
+float n1,n2,n3,n4,media,exame;
+main(){
+	printf("\nDigite a nota do primeiro bimestre:");
+	scanf("%f", &n1);
+	printf("\nDigite a nota do segundo bimestre:");
+	scanf("%f", &n2);
+	printf("\nDigite a nota do terceiro bimestre:");
+	scanf("%f", &n3);
+	printf("\nDigite a nota do quarto bimestre:");
+	scanf("%f", &n4);
+	media = (n1+n2+n3+n4) / 4;
+	if(media >= 7){
+		printf("\nAluno aprovado media: %.2f", media);
+	}else{
+		printf("\nDigite a nota do exame:");
+		scanf("%f", &exame);
+		media = (media+exame) / 2;
+		if(media >= 5){
+			printf("\nAluno aprovado em exame media: %.2f", media);
+		}else{
+			printf("\nAluno reprovado em exame media: %.2f", media);
+		}
+	}
+	
+}
+
+//== exe 04
+#include <stdio.h>
+int v_motorista, v_maxima;
+main(){
+	printf("Digite a velocidade maxima:\n");
+	scanf("%i", &v_maxima);
+	printf("Digite a velocidade do motorista:\n");
+	scanf("%i", &v_motorista);
+	if(v_motorista <= v_maxima){
+		printf("Velocidade permitida");
+	}else{
+		if(v_motorista <= (v_maxima*1.2)){
+			printf("Multa grave");
+		}else{
+			printf("Multa gravíssima");
+		}
+	}
+}
