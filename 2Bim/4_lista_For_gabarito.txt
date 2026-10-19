@@ -1,0 +1,125 @@
+    #include <stdio.h>
+    int main() {
+    // ==========================================
+    // EXERCÍCIO 1: Contagem de múltiplos de 3
+    // ==========================================
+    printf("--- Exercicio 1 ---\n");
+    int num1, contMultiplos3 = 0;
+    for(int i = 1; i <= 10; i++) {
+        printf("Digite o %dº numero: ", i);
+        scanf("%d", &num1);
+        if(num1 % 3 == 0) {
+            contMultiplos3++;
+        }
+    }
+    printf("Quantidade de multiplos de 3: %d\n\n", contMultiplos3);
+    // ==========================================
+
+
+    // EXERCÍCIO 2: Média de idades de 5 pessoas
+    // ==========================================
+    printf("--- Exercicio 2 ---\n");
+    int idade, somaIdades = 0;
+    for(int i = 1; i <= 5; i++) {
+        printf("Digite a idade da %dª pessoa: ", i);
+        scanf("%d", &idade);
+        somaIdades += idade;
+    }
+    float mediaIdades = (float)somaIdades / 5;
+    printf("A media das idades e: %.2f\n\n", mediaIdades);
+
+
+    // ==========================================
+    // EXERCÍCIO 3: Fatorial de um número
+    // ==========================================
+    printf("--- Exercicio 3 ---\n");
+    int nFatorial, fatorial = 1;
+    printf("Digite um numero para calcular o fatorial: ");
+    scanf("%d", &nFatorial);
+    for(int i = 1; i <= nFatorial; i++) {
+        fatorial *= i;
+    }
+    printf("O fatorial de %d e: %d\n\n", nFatorial, fatorial);
+
+
+
+    // ==========================================
+    // EXERCÍCIO 4: Soma dos pares de 1 até 50
+    // ==========================================
+    printf("--- Exercicio 4 ---\n");
+    int somaPares = 0;
+    for(int i = 1; i <= 50; i++) {
+        if(i % 2 == 0) {
+            somaPares += i;
+        }
+    }
+    printf("O somatorio dos numeros pares de 1 ate 50 e: %d\n\n", somaPares);
+
+
+    // ==========================================
+    // EXERCÍCIO 5: Potenciação sem biblioteca
+    // ==========================================
+    printf("--- Exercicio 5 ---\n");
+    int base, expoente, resultadoPotencia = 1;
+    printf("Digite a base: ");
+    scanf("%d", &base);
+    printf("Digite o expoente (positivo): ");
+    scanf("%d", &expoente);
+    for(int i = 1; i <= expoente; i++) {
+        resultadoPotencia *= base;
+    }
+    printf("%d elevado a %d e: %d\n\n", base, expoente, resultadoPotencia);
+
+
+    // ==========================================
+    // EXERCÍCIO 6: Estatísticas de peso
+    // ==========================================
+    printf("--- Exercicio 6 ---\n");
+    float peso;
+    int acima80 = 0, abaixo80 = 0;
+    for(int i = 1; i <= 7; i++) {
+        printf("Digite o peso da %dª pessoa (kg): ", i);
+        scanf("%f", &peso);
+        if(peso > 80.0) {
+            acima80++;
+        } else {
+            abaixo80++;
+        }
+    }
+    printf("Pessoas com mais de 80kg: %d\n", acima80);
+    printf("Pessoas com 80kg ou menos: %d\n\n", abaixo80);
+
+    // ==========================================
+    // EXERCÍCIO 7: Verificação de número primo
+    // ==========================================
+    printf("--- Exercicio 7 ---\n");
+    int numPrimo, divisores = 0;
+    printf("Digite un numero inteiro positivo: ");
+    scanf("%d", &numPrimo);
+    for(int i = 1; i <= numPrimo; i++) {
+        if(numPrimo % i == 0) {
+            divisores++;
+        }
+    }
+    if(divisores == 2) {
+        printf("O numero %d e PRIMO.\n\n", numPrimo);
+    } else {
+        printf("O numero %d NAO e primo.\n\n", numPrimo);
+    }
+
+
+    // ==========================================
+
+
+    // ==========================================
+    // EXERCÍCIO 8: Contagem regressiva
+    // ==========================================
+    printf("--- Exercicio 8 ---\n");
+    printf("Iniciando contagem regressiva:\n");
+    for(int i = 10; i >= 1; i--) {
+        printf("%d...\n", i);
+    }
+    printf("Fim do tempo!\n");
+
+    return 0;
+}
