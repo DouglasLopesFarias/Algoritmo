@@ -10,3 +10,24 @@ main(){
 	}
 }
 ======================
+
+======== execicio 02 ==============
+#include <stdio.h>
+float media,n1,n2;
+main(){
+	printf("Digite a nota da primeira avaliação(0 a 10):\n");
+	scanf("%f", &n1);
+	while( (n1<0) || (n1>10) )   {
+		printf("Digite um valor valido de 0 a 10:\n");
+		scanf("%f", &n1);
+	}
+	
+	printf("Digite a nota da segunda avaliação(0 a 10):\n");
+	scanf("%f", &n2);
+	while( (n2<0) || (n2>10) )   {
+		printf("Digite um valor valido de 0 a 10:\n");
+		scanf("%f", &n2);
+	}
+	media = (n1+n2) / 2;
+	printf("\nMedia: %.2f", media);	
+}
