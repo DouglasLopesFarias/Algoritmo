@@ -1,0 +1,60 @@
+//==== exemplo vetor 
+#include <stdio.h>
+main(){
+	float notas[4];	
+	for(int i=0; i<4; i++){
+		printf("Digite a nota do %d bimestre:\n ", i+1);
+		scanf("%f", &notas[i]);
+	}
+	for(int i=0; i<4; i++){
+		printf("\nNota do %d bimestre: %.2f", i+1, notas[i]);		
+	}	
+}
+
+//==== exemplo matriz
+#include <stdio.h>
+main(){
+	int matriz[3][3];
+	for(int i=0; i<3; i++){
+		for(int j=0; j<3; j++){
+			matriz[i][j] = i+j;
+		}
+	}	
+	for(int i=0; i<3; i++){
+		printf("\n");
+		for(int j=0; j<3; j++){
+			printf("\nLinha %d coluna %d = %d", i, j, matriz[i][j]); 
+		}		
+	}
+}
+
+//==== exemplo funcao
+#include <stdio.h>
+
+int somarDoisNumeros(int n1, int n2){
+	return n1+n2;
+}
+main(){
+	int a,b,resultado;	
+	printf("Digite o primeiro numero: ");
+	scanf("%d", &a);
+    printf("Digite o segundo numero: ");
+	scanf("%d", &b);	
+	resultado = somarDoisNumeros(a,b);
+	printf("\nResultado: %d", resultado);	
+}
+
+#include <stdio.h>
+void menu(){
+	printf("01 - Cadastrar\n");	
+    printf("02 - Consultar\n");	
+    printf("03 - Remover\n");	
+    printf("04 - Listar\n");	
+    printf("05 - Sair do sistema\n");	
+    printf("Digite uma opção\n");		
+}
+
+main(){
+    menu();    
+    
+}
