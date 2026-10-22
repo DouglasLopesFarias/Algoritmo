@@ -31,3 +31,167 @@ main(){
 	media = (n1+n2) / 2;
 	printf("\nMedia: %.2f", media);	
 }
+
+======== execicio 03 ==============
+#include <stdio.h>
+
+int main() {
+    int opcao;
+
+    do {
+        // Exibição do menu
+        printf("\n--- MENU DE OPÇÕES ---\n");
+        printf("1 - SAUDAÇÃO\n");
+        printf("2 - BRONCA\n");
+        printf("3 - FELICITAÇÃO\n");
+        printf("0 - FIM\n");
+        printf("Escolha uma opção: ");
+        scanf("%d", &opcao);
+
+        // Verificação da opção escolhida
+        switch(opcao) {
+            case 1:
+                printf("Olá. Como vai ?\n");
+                break;
+            case 2:
+                printf("Vamos estudar mais.\n");
+                break;
+            case 3:
+                printf("Meus Parabéns !\n");
+                break;
+            case 0:
+                printf("Fim de serviço.\n");
+                break;
+            default:
+                printf("Opção inválida! Tente novamente.\n");
+        }
+    } while(opcao != 0);
+
+    return 0;
+}
+
+
+
+======== execicio 04 ==============
+
+#include <stdio.h>
+
+int main() {
+    int numero;
+    int maior;
+
+    printf("Digite um número (0 para sair): ");
+    scanf("%d", &numero);
+
+    // Se o primeiro número já for 0, o programa não digitou valores válidos
+    if (numero == 0) {
+        printf("Nenhum número válido foi digitado.\n");
+        return 0;
+    }
+
+    // Inicializa o maior com o primeiro número lido
+    maior = numero;
+
+    while (numero != 0) {
+        if (numero > maior) {
+            maior = numero; // Atualiza o maior valor encontrado
+        }
+        printf("Digite um número (0 para sair): ");
+        scanf("%d", &numero);
+    }
+
+    printf("O maior número digitado foi: %d\n", maior);
+
+    return 0;
+}
+
+
+======== execicio 05 ==============
+
+#include <stdio.h>
+
+int main() {
+    int estoque_notas = 1000;
+    int valor_saque = 0;
+    int notas_necessarias;
+
+    while (valor_saque >= 0) {
+        printf("\nEstoque atual de notas: %d\n", estoque_notas);
+        printf("Digite o valor do saque (valor negativo para encerrar): ");
+        scanf("%d", &valor_saque);
+
+        // Condição de parada: valor negativo
+        if (valor_saque < 0) {
+            printf("Programa encerrado pelo usuário.\n");
+            break;
+        }
+
+        // Validação 1: Múltiplo de 10
+        if (valor_saque % 10 != 0) {
+            printf("Erro: O valor deve ser múltiplo de 10.\n");
+        } 
+        // Validação 2: Quantidade de notas em estoque
+        else {
+            notas_necessarias = valor_saque / 10;
+
+            if (notas_necessarias > estoque_notas) {
+                printf("Erro: Não há notas suficientes no repositório para este saque.\n");
+            } else {
+                // Saque bem-sucedido: atualiza o estoque
+                estoque_notas -= notas_necessarias;
+                printf("Saque realizado com sucesso! Fornecidas %d notas de R$ 10.\n", notas_necessarias);
+            }
+        }
+    }
+
+    return 0;
+}
+
+
+======== execicio 06 ==============
+
+#include <stdio.h>
+
+int main() {
+    int voto = -1;
+    int cand1 = 0, cand2 = 0, cand3 = 0;
+    int brancos = 0, nulos = 0, total_votos = 0;
+    float perc_brancos = 0.0, perc_nulos = 0.0;
+
+    while (voto != 0) {
+        printf("Digite o seu voto (1, 2, 3 = Candidatos | 4 = Branco | 5 = Nulo | 0 = Encerrar): ");
+        scanf("%d", &voto);
+
+        switch(voto) {
+            case 1: cand1++; total_votos++; break;
+            case 2: cand2++; total_votos++; break;
+            case 3: cand3++; total_votos++; break;
+            case 4: brancos++; total_votos++; break;
+            case 5: nulos++; total_votos++; break;
+            default: printf("Código inválido! Voto não computado.\n");
+        }
+    }
+
+    // Exibição dos resultados apenas se houver votos computados
+    printf("\n======= RESULTADO DA APURAÇÃO =======\n");
+    printf("Candidato 1: %d votos\n", cand1);
+    printf("Candidato 2: %d votos\n", cand2);
+    printf("Candidato 3: %d votos\n", cand3);
+    printf("Votos em Branco: %d\n", brancos);
+    printf("Votos Nulos: %d\n", nulos);
+    printf("Total Geral de Votos: %d\n", total_votos);
+
+    if (total_votos > 0) {
+        // Cálculo dos percentuais
+        perc_brancos = ((float)brancos / total_votos) * 100;
+        perc_nulos = ((float)nulos / total_votos) * 100;
+        
+        printf("Percentual de Brancos: %.2f%%\n", perc_brancos);
+        printf("Percentual de Nulos: %.2f%%\n", perc_nulos);
+    } else {
+        printf("Nenhum voto foi registrado nesta eleição.\n");
+    }
+
+    return 0;
+}
+
