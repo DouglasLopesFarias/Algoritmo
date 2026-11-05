@@ -1,27 +1,20 @@
-ATENÇÃO COMO AVISADO EM SALA DE AULA QUEM SE INSCREVEU DEPOIS DAS 20 VAGAS PREENCHIDAS PODERA FAZER A PROVA SOMENTE SE HOUVER VAGA NO LABORATÓRIO, SE NAO COUBER E NAO ESTIVER NA LISTA DO DIA TERA QUE FAZER OUTRO DIA
+Trabalho 2 Bim:
+utilize um vetor de 100 posições de uma struc para fazer um cadastro qualquer, escolha se vai ser cliente, fornecedor, produto, aluno etc. O cadastro deve conter:
+um menu para realizar o cadastro, este meno deve estar rodando dentro de um lação de repetição ou while ou do while:
 
-# Algoritmo
-Disciplina de Algoritmo
+"01 - Cadastrar"
+"02 - Consultar"
+"03 - Listar"
+"04 - Remover"
+"05 - Sair do Sistema"
+"Digite uma opção"
 
-#Link inscrição prova dia 14 Turma A
-[https://docs.google.com/forms/d/e/1FAIpQLSe3trUJZmqWLsfZzKr5Eugd08BWJHN6wh336EghJzhEnTgSAA/viewform](https://docs.google.com/forms/d/e/1FAIpQLSe2H-JyBw-IDghMBnO4LcvxhvLkSGwz9sPaIsSTpdC8VGOtUw/viewform?usp=publish-editor)
+Ao escolher a opção cadastrar pela primeira vez, o sistema deve pedir os dados do cadastro e armazenar os dados na primeira posição do vetor, ao terminar volta para o menu. Ao chamar a função novamente o cadastro deve preencher os dados na segunda posição do vetor e assim sucessivamente, crie uma variável para gerenciar a posição do próximo a ser cadastrado.
 
-#Link inscrição prova dia 16 Turma A
-https://docs.google.com/forms/d/e/1FAIpQLScpBYn-gAPZUsJRhOg27Fg_KetMmAqUjOTwFZ1g-7DTaFy89g/viewform
+Ao escolher a opção consultar o sistema deve percorrer o vetor e imprimir os dados do registro encontrado, caso nao encontrar imprime a mensagem cadastro nao localizado:
 
-======================================================================================
-#Link inscrição prova dia 14 Turma B
-https://docs.google.com/forms/d/e/1FAIpQLSdGaurBWXcYt0a8xm0HZu4EDZKbuKHFQ-0L_yp7LtY4zuMJnQ/viewform?usp=publish-
+Ao escolher a opção listar o sistema deve imprimir os dados de todos registros cadastrados
 
-#Link inscrição prova dia 17 Turma B
-https://docs.google.com/forms/d/e/1FAIpQLSd04KiEHwpmF251Btj-h0jqcqfU_24jRbkGjoj9apYYjdZ-Og/viewform?usp=publish-editor
+Ao escolher a opção remover, o sistema deve procurar o registro no vetor, caso encontre copie os dados do ultimo cadastrado na posição do registro a ser excluido, depois decrementa a variável que gerencia a posição do próximo a ser cadastrado para ignorar este registro.
 
-======================================================================================
-
-#Link inscrição prova dia 15 Turma C
-https://docs.google.com/forms/d/e/1FAIpQLSe3trUJZmqWLsfZzKr5Eugd08BWJHN6wh336EghJzhEnTgSAA/viewform
-
-#Link inscrição prova dia 17 Turma C
-https://docs.google.com/forms/d/e/1FAIpQLSdDlIauYPVMAHgfDu6mPRErP685U9xAxdgjeYSO6Bve0HKK_w/viewform?usp=publish-editor
-
-======================================================================================
+Ao escolher a opção sair do sistema o sistema deve parar a execução.
